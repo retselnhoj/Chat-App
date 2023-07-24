@@ -41,10 +41,12 @@
     messages.innerHTML += content;
   };
 
+  // Event listener for receiving messages from the server
   socketio.on("message", (data) => {
     createMessage(data.name, data.message);
   });
 
+  // Function to send messages to the server
   const sendMessage = () => {
     const message = document.getElementById("message");
     if (message.value == "") return;
