@@ -1,5 +1,5 @@
 # Import necessary modules and libraries
-from flask import Flask, render_template, request, session, redirect, url_for
+from flask import Flask, render_template, request, session, redirect, url_for, jsonify
 from flask_socketio import join_room, leave_room, send, SocketIO
 import random
 from string import ascii_uppercase
@@ -23,6 +23,19 @@ def generate_unique_code(length):
             break
     
     return code
+
+
+# API endpoint to get the list of chat rooms
+@app.route("/api/chat_rooms", methods=["GET"])
+def get_chat_rooms():
+    return jsonify(list(rooms.keys()))
+
+# API endpoint to get the messages of a specific chat room
+@app.route("/api/chat_rooms/<string:room_code>/messages", methods=["GET"])
+def get_chat_room_messages(room_code):
+    if room_code not in rooms:
+        return jsonify({"error": "Room not found"}), 404
+    return jsonify(rooms[room_code]["messages"])
 
 # Route for the home page
 @app.route("/", methods=["POST", "GET"])
