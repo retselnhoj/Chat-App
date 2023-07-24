@@ -28,7 +28,7 @@ To run the Chat App on your local machine, follow these steps:
 1. Clone the repository from GitHub:
 
 ```
-git clone <repository_url>
+git clone (https://github.com/retselnhoj/Chat-App.git)
 ```
 
 2. Install the required dependencies using pip:
