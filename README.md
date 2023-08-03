@@ -28,13 +28,14 @@ To run the Chat App on your local machine, follow these steps:
 1. Clone the repository from GitHub:
 
 ```
-git clone (https://github.com/retselnhoj/Chat-App.git)
+git clone -b master https://github.com/retselnhoj/Chat-App.git
 ```
 
 2. Install the required dependencies using pip:
 
 ```
-pip install -r requirements.txt
+pip install flask-socketio
+pip install simple-websocket
 ```
 
 3. Run the application:
