@@ -91,6 +91,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
-For your reference:
-I just watch  this tutorial in Youtube: Tech with Tim
 
