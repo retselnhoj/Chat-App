@@ -90,7 +90,3 @@ The app should now be running at `http://127.0.0.1:5000/`.
 This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgments
-
-For your reference:
-I just watch  this tutorial in Youtube: Tech with Tim
-
